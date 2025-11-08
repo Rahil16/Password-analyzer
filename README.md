@@ -6,7 +6,7 @@ A modern and intelligent **Password Strength and Breach Analyzer** built with **
 ---
 
 ## 🧠 Overview
-This project focuses on strengthening **awareness** by helping users understand how secure their passwords really are. It evaluates password strength based on key security metrics—length, complexity, uniqueness, and resistance to common or sequential patterns—and checks if the password has appeared in global data breaches via the **HaveIBeenPwned API**.
+This project focuses on strengthening **awareness** by helping users understand how secure their passwords really are. It evaluates password strength based on key security metrics length, complexity, uniqueness, and resistance to common or sequential patterns and checks if the password has appeared in global data breaches via the **HaveIBeenPwned API**.
 
 The system leverages cryptographic hashing (SHA-1) and the **k-anonymity model** to ensure user privacy during breach verification. By combining local analysis with external breach intelligence, this project demonstrates the importance of **security practices** in everyday applications.
 

@@ -32,4 +32,4 @@ It showcases:
 - **Performance optimization** through input debouncing and minimal API calls.
 - **Intuitive feedback design** using real-time visual indicators for strength analysis.
 
----
+

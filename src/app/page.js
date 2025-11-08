@@ -50,21 +50,21 @@ export default function PasswordAnalyzer() {
     setBreachStatus(null);
 
     try {
-      // Hash the password using SHA-1
+      
       const encoder = new TextEncoder();
       const data = encoder.encode(pwd);
       const hashBuffer = await crypto.subtle.digest('SHA-1', data);
       const hashArray = Array.from(new Uint8Array(hashBuffer));
       const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('').toUpperCase();
 
-      // Use k-anonymity: send only first 5 chars
+      
       const prefix = hashHex.substring(0, 5);
       const suffix = hashHex.substring(5);
 
       const response = await fetch(`https://api.pwnedpasswords.com/range/${prefix}`);
       const text = await response.text();
 
-      // Check if our suffix appears in the results
+      
       const lines = text.split('\n');
       const found = lines.find(line => line.startsWith(suffix));
 
@@ -110,7 +110,7 @@ export default function PasswordAnalyzer() {
         </div>
 
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/20">
-          {/* Password Input */}
+          
           <div className="mb-8">
             <label className="block text-white text-sm font-semibold mb-2">
               Enter Password
@@ -134,7 +134,7 @@ export default function PasswordAnalyzer() {
 
           {strength && (
             <>
-              {/* Strength Meter */}
+              
               <div className="mb-8">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-white text-sm font-semibold">Strength Score</span>
@@ -149,7 +149,7 @@ export default function PasswordAnalyzer() {
                 <div className="text-white/70 text-xs mt-1">{strength.score}/7 criteria met</div>
               </div>
 
-              {/* Criteria Checklist */}
+              
               <div className="bg-white/5 rounded-lg p-6 mb-8">
                 <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
                   <Lock className="w-5 h-5" />
@@ -179,7 +179,7 @@ export default function PasswordAnalyzer() {
                 </div>
               </div>
 
-              {/* Breach Status */}
+              
               <div className="bg-white/5 rounded-lg p-6">
                 <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
                   <Database className="w-5 h-5" />

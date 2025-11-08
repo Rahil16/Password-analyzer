@@ -1,4 +1,4 @@
-```markdown
+
 # 🔐 Password Analyzer
 
 A modern and intelligent **Password Strength and Breach Analyzer** built with **React** and **Tailwind CSS**, designed to assess password security using multiple criteria and check exposure in known data breaches.
@@ -33,5 +33,3 @@ It showcases:
 - **Intuitive feedback design** using real-time visual indicators for strength analysis.
 
 ---
-
-```
